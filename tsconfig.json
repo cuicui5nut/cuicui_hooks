@@ -12,5 +12,5 @@
       "cuicui_hooks/*": ["src/*", "*"]
     }
   },
-  "include": [".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts", "src/**/*",]
 }
