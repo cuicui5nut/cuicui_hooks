@@ -6,6 +6,6 @@ hero:
     - text: 指南
       link: /guide
     - text: Hooks列表
-      link: /hooks
+      link: /hooks/use-boolean
 ---
 

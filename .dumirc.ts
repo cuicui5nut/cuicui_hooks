@@ -2,6 +2,8 @@ import { defineConfig } from "dumi";
 import { menus } from "./hooks/src/menus";
 export default defineConfig({
   outputPath: "dist",
+  base:'/cuicui_hooks/',
+  publicPath: '/cuicui_hooks/',
   resolve: {
     atomDirs: [
       {
