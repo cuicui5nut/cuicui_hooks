@@ -1,8 +1,8 @@
 ---
-title: useBoolean
+nav: Hooks
 group:
-  title: Hooks
-  path: /hooks
+  title: 状态
+  order: 1
 ---
 # useBoolean
 

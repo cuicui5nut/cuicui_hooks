@@ -1,12 +1,12 @@
 import { defineConfig } from "dumi";
-import { menus } from "./src/menus";
+import { menus } from "./hooks/src/menus";
 export default defineConfig({
   outputPath: "docs-dist",
   resolve: {
     atomDirs: [
       {
         type: "hooks",
-        dir: "src/hooks",
+        dir: "hooks/src",
       },
     ],
   },
@@ -14,7 +14,7 @@ export default defineConfig({
     name: "cHooks",
     nav: [
       { title: "指南", link: "/guide" },
-      { title: "Hooks", link: "/hooks" },
+      { title: "Hooks", link: "/hooks/use-boolean", activePath: "/hooks" },
     ],
     sidebar: {
       "/guide": [

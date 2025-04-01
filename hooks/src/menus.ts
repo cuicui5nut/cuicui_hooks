@@ -1,13 +1,10 @@
+import { formatRoute } from '../utils'
 export const menus = [
     {
         title: '生命周期',
-        children: [{
-            title: "useUnmount",
-            link: 'useUnmount'
-        }, {
-            title: "useUnmountedRef",
-            link: 'useUnmountedRef'
-        }]
+        children: ['useUnmount', 'useUnmountedRef'].map(route => ({
+            title: route, link: `/hooks/${formatRoute(route)}`
+        }))
     },
     {
         title: '状态',
@@ -26,20 +23,20 @@ export const menus = [
             'useSetState',
             'useToggle',
             'useThrottle',
-        ].map(route=>({
-            title:route,link:`/hooks/${route}`
+        ].map(route => ({
+            title: route, link: `/hooks/${formatRoute(route)}`
         }))
     },
     {
         title: 'Effect',
-        children: ['useDebounceFn', 'useThrottleFn', 'useUpdateEffect'].map(route=>({
-            title:route,link:route
+        children: ['useDebounceFn', 'useThrottleFn', 'useUpdateEffect'].map(route => ({
+            title: route, link: `/hooks/${formatRoute(route)}`
         }))
     },
     {
         title: '进阶',
-        children: ['useLatest', 'useMemoizedFn'].map(route=>({
-            title:route,link:route
+        children: ['useLatest', 'useMemoizedFn'].map(route => ({
+            title: route, link: `/hooks/${formatRoute(route)}`
         }))
     },
 ];
