@@ -1,7 +1,7 @@
 import { defineConfig } from "dumi";
 import { menus } from "./hooks/src/menus";
 export default defineConfig({
-  outputPath: "docs-dist",
+  outputPath: "dist",
   resolve: {
     atomDirs: [
       {
