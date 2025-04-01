@@ -7,7 +7,6 @@ export interface Actions {
   set: (value: boolean) => void;
   toggle: () => void;
 }
-
 export default function useBoolean(defaultValue = false): [boolean, Actions] {
   const [state, { toggle, set }] = useToggle(!!defaultValue);
 
