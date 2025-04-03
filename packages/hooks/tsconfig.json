@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "composite": true // 启用项目引用功能，允许将项目拆分成多个小型项目
+  }
+}

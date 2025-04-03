@@ -1,0 +1,47 @@
+{
+    "presets": [
+      // TypeScript 支持
+      "@babel/preset-typescript",
+      
+      // React 支持（自动启用新版 JSX 转换）
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic", // 自动导入 jsx-runtime，无需手动引入 React
+          "development": false    // 生产环境优化
+        }
+      ],
+      
+      // 浏览器/Node 环境适配
+      [
+        "@babel/preset-env",
+        {
+          "modules": false,      // 保留 ESM 语法（便于摇树优化）
+          "targets": {           // 兼容现代浏览器和 Node LTS
+            "browsers": [">0.2%", "not dead", "not op_mini all"],
+            "node": "current"
+          },
+          "useBuiltIns": false, // Hooks 库通常不直接处理 polyfill
+          "bugfixes": true       // 修复边缘情况下的语法转换
+        }
+      ]
+    ],
+    "plugins": [
+      // 运行时辅助代码优化
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "corejs": false,       // Hooks 库不需要 core-js polyfill
+          "helpers": true,       // 复用工具函数
+          "regenerator": false   // 假设不使用 generator 函数
+        }
+      ]
+    ],
+    // 忽略配置
+    "ignore": [
+      "**/*.d.ts",             // 排除类型声明文件
+      "**/__tests__/**"        // 排除测试文件（如果不需要转译）
+    ],
+    // 源码映射配置（可选）
+    "sourceMaps": true
+  }

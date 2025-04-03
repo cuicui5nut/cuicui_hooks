@@ -1,4 +1,4 @@
-import { formatRoute } from '../utils'
+import { formatRoute } from '../packages/utils'
 export const menus = [
     {
         title: '生命周期',

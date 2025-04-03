@@ -1,16 +1,24 @@
 {
   "compilerOptions": {
+    "target": "ES5",
     "strict": true,
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "jsx": "react",
-    "baseUrl": "./",
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "cuicui_hooks": ["hooks/src"],
-      "cuicui_hooks/*": ["hooks/src/*", "*"]
+      "cuicui_hooks": ["packages/hooks/src"],
+      "cuicui_hooks/*": ["packages/hooks/src/*", "*"]
     }
   },
-  "include": [".dumirc.ts", "hooks/src/**/*", "hooks/src/index.ts",]
+  "exclude": ["node_modules", "lib", "es", "dist", "example"]
+
 }

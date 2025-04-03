@@ -1,14 +1,17 @@
 import { defineConfig } from "dumi";
-import { menus } from "./hooks/src/menus";
+import { menus } from "./config/menus";
 export default defineConfig({
   outputPath: "dist",
-  base:'/cuicui_hooks/',
-  publicPath: '/cuicui_hooks/',
+  alias: {
+    cuicuiHooks: process.cwd() + "/packages/hooks/src/index.ts",
+  },
+  base: "/cuicui-hooks/",
+  publicPath: "/cuicui-hooks/",
   resolve: {
     atomDirs: [
       {
         type: "hooks",
-        dir: "hooks/src",
+        dir: "packages/hooks/src",
       },
     ],
   },

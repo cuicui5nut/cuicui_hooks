@@ -1,0 +1,23 @@
+{
+  "name": "cuicui-hooks",
+  "version": "0.0.1",
+  "description": "cuicui's hooks",
+  "main": "index.js",
+  "scripts": {
+    "build":"gulp"
+  },
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "package.json"
+
+  ],
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.0"
+}
